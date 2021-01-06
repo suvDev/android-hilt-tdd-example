@@ -75,4 +75,11 @@ dependencies {
 
     // recyclerview
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    def rxjava_version = '2.2.0'
+    def rxkotlin_version = '2.3.0'
+    def rxandroid_version = '2.1.0'
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
 }

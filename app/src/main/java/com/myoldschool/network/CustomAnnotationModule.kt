@@ -7,7 +7,7 @@ import dagger.hilt.android.components.ApplicationComponent
 import javax.inject.Qualifier
 
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(ApplicationComponent::class)
 object CustomAnnotationModule {
     @Qualifier
     @Retention(AnnotationRetention.BINARY)
