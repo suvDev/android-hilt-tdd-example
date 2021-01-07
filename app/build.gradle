@@ -45,6 +45,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+
     // hilt dependency
     def hilt_version = '2.28-alpha'
     implementation "com.google.dagger:hilt-android:$hilt_version"
@@ -60,6 +61,9 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
     implementation "com.squareup.okhttp3:logging-interceptor:4.7.2"
     implementation 'com.google.code.gson:gson:2.8.6'
+    implementation "com.squareup.okhttp3:okhttp:4.7.2"
+    // mockwebserver
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.7.2'
 
     // livedata and viewmodel
     def lifecycle_version = "2.2.0"
