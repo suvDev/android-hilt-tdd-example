@@ -46,6 +46,40 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     // hilt dependency
-    implementation "com.google.dagger:hilt-android:2.28-alpha"
-    kapt "com.google.dagger:hilt-android-compiler:2.28-alpha"
+    def hilt_version = '2.28-alpha'
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha01"
+    kapt "androidx.hilt:hilt-compiler:1.0.0-alpha01"
+
+    // retrofit dependency
+    def retrofit_version = '2.9.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.7.2"
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // livedata and viewmodel
+    def lifecycle_version = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    // For Kotlin use lifecycle-viewmodel-ktx
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+
+    implementation "androidx.fragment:fragment-ktx:1.2.5"
+    implementation "androidx.activity:activity-ktx:1.2.0-rc01"
+
+    // recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    def rxjava_version = '2.2.0'
+    def rxkotlin_version = '2.3.0'
+    def rxandroid_version = '2.1.0'
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
 }
