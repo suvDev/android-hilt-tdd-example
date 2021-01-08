@@ -15,11 +15,8 @@ object InterceptorModule {
 
     @CustomAnnotationModule.HttpLoggingInterceptorOkHttp
     @Provides
-    @Singleton
     fun providesHttpLoggingInterceptor(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
         return OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build()
     }
-
-
 
 }
