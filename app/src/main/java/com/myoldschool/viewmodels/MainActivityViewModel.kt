@@ -33,7 +33,7 @@ constructor(
         apiRepository.getAllRecords()
             .myApiSubscriber(MutableLiveData<Boolean>())
             .subscribe({
-            observeGetAllRecordsAPI.value = it
+            observeGetAllRecordsAPI.postValue(it)
         },{it.printStackTrace()}).addTo(compositeDisposable)
     }
 
