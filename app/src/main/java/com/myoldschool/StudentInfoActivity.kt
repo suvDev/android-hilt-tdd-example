@@ -21,6 +21,5 @@ class StudentInfoActivity : AppCompatActivity() {
         name.text = bundle?.getString(Constants.NAME)
         rollnum.text = bundle?.getString(Constants.RollNum)
         marks.text = bundle?.getString(Constants.MARKS)
-
     }
 }
