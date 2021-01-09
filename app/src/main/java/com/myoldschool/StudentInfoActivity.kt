@@ -17,9 +17,9 @@ class StudentInfoActivity : AppCompatActivity() {
 
     private fun initViews(){
         val bundle = intent.extras
-        sid.text = bundle?.getString(Constants.ID)
-        name.text = bundle?.getString(Constants.NAME)
-        rollnum.text = bundle?.getString(Constants.RollNum)
-        marks.text = bundle?.getString(Constants.MARKS)
+        sid.text = "ID: "+ bundle?.getString(Constants.ID)
+        name.text = "Name: "+ bundle?.getString(Constants.NAME)
+        rollnum.text = "Roll No.: "+bundle?.getString(Constants.RollNum)
+        marks.text = "Marks: "+bundle?.getString(Constants.MARKS)
     }
 }
