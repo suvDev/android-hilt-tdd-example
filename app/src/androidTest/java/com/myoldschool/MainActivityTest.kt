@@ -14,11 +14,14 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class MainActivityTest {
 
-    @Rule
-    var mActivityRule: ActivityScenarioRule<MainActivity> = ActivityScenarioRule(MainActivity::class.java)
+    @get:Rule
+    var mActivityRule = ActivityScenarioRule(MainActivity::class.java)
 
     @Test
     fun testProgressBarVisible(){
+        // Given: test Progress bar is visible or hidden on activity launch
+        // When: MainActivity is launched
+        // Then: Progress bar should be visible
         onView(withId(R.id.progressbar)).check(matches(isDisplayed()))
     }
 
