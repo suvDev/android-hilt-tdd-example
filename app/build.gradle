@@ -44,7 +44,21 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    androidTestImplementation 'androidx.test:core:' + rootProject.coreVersion
+    androidTestImplementation 'androidx.test:core-ktx:' + rootProject.coreVersion
+    androidTestImplementation 'androidx.test.ext:junit:' + rootProject.extJUnitVersion
+    androidTestImplementation 'androidx.test.ext:junit-ktx:' + rootProject.extJUnitVersion
+    androidTestImplementation 'androidx.test:runner:' + rootProject.runnerVersion
+    androidTestImplementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion
+
+    testImplementation 'androidx.test:core:' + rootProject.coreVersion;
+    testImplementation 'androidx.test.ext:junit:' + rootProject.extJUnitVersion
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.robolectric:robolectric:' + rootProject.robolectricVersion
+    testImplementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion
+    testImplementation 'androidx.test.espresso:espresso-intents:' + rootProject.espressoVersion
+    testImplementation 'androidx.test.ext:truth:' + rootProject.extTruthVersion
 
 
     // hilt dependency
