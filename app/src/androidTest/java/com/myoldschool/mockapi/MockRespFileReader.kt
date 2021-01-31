@@ -1,4 +1,4 @@
-package com.myoldschool
+package com.myoldschool.mockapi
 
 import java.io.InputStreamReader
 
