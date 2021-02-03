@@ -17,7 +17,6 @@ open class BaseUITest {
     @Before
     open fun setup() {
         mockWebServer.start(5000)
-        viewModel = mock()
         Retrofit.Builder()
                 .baseUrl(mockWebServer.url("/"))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

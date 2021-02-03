@@ -13,6 +13,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.Mockito.mock
 
 
 @RunWith(AndroidJUnit4::class)
@@ -37,6 +38,7 @@ class MainActivityTest: BaseUITest() {
     @Before
      override fun setup() {
         super.setup()
+        viewModel = mock(MainActivityViewModel::class.java)
         mActivityTestRule.launchActivity(null)
     }
 

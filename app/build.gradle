@@ -9,7 +9,6 @@ plugins {
 android {
     compileSdkVersion 30
     buildToolsVersion "29.0.3"
-
     defaultConfig {
         applicationId "com.myoldschool"
         minSdkVersion 16
@@ -58,6 +57,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion
     androidTestImplementation 'androidx.test.espresso:espresso-intents:' + rootProject.espressoVersion
     androidTestImplementation 'androidx.test.ext:truth:' + rootProject.extTruthVersion
+    androidTestImplementation 'org.mockito:mockito-core:3.3.3'
 
 
     // hilt dependency
@@ -99,4 +99,6 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
 
     implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.github.martinstamenkovski:ARIndicatorView:2.0.0'
+
 }
