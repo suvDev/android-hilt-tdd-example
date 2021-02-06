@@ -14,15 +14,27 @@ class TestCustomDotsIndicator : AppCompatActivity(), RecyclerViewAdapter.onStude
         setContentView(R.layout.activity_test_custom_dots_indicator)
 
         val adapter = RecyclerViewAdapter(arrayListOf(
-            StudentModel(1,99.98,"dddd",3),
-            StudentModel(1,99.98,"dddd",3),
-            StudentModel(1,99.98,"dddd",3),
-            StudentModel(1,99.98,"dddd",3)
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3),
+                StudentModel(1, 99.98, "dddd", 3)
         ), this)
-        test_rv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        test_rv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         test_rv.adapter = adapter
-        ar_indicator.attachTo(test_rv, true)
-        ar_indicator.numberOfIndicators = 4
+//        ar_indicator.attachTo(test_rv, true)
+//        ar_indicator.numberOfIndicators = 4
     }
 
     override fun onStudentRowClick(studentInfo: StudentModel) {
