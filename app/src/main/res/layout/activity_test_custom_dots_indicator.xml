@@ -29,7 +29,7 @@
         app:indicator_color="@android:color/darker_gray"
         app:selected_color="#46f54e"
         app:indicator_animation="@anim/zoom_in"
-        app:indicator_shape="@drawable/rectangle"
+        app:indicator_srhape="@drawable/rectangle"
         app:indicator_scrubbing="true"
         app:animate_indicator_scrubbing="true"
         />
