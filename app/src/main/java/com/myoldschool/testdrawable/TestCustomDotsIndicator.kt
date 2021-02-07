@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_test_custom_dots_indicator.*
 class TestCustomDotsIndicator : AppCompatActivity(), RecyclerViewAdapter.onStudentClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_test_custom_dots_indicator)
+        setContentView(R.layout.activity_test_custom_dots_indicator_motionlayout)
 
         val adapter = RecyclerViewAdapter(arrayListOf(
                 StudentModel(1, 99.98, "dddd", 3),
