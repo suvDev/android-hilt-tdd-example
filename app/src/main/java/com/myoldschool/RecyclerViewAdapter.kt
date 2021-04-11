@@ -8,8 +8,8 @@ import com.myoldschool.network.StudentModel
 import kotlinx.android.synthetic.main.recyclerview_item.view.*
 
 
-class RecyclerViewAdapter(val studentList: List<StudentModel>,
-                          val onStudentRowClick: onStudentClick): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class RecyclerViewAdapter(private val studentList: List<StudentModel>,
+                          private val onStudentRowClick: onStudentClick): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.recyclerview_item, parent, false)

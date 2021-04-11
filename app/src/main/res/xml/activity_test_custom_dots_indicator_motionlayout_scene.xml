@@ -11,23 +11,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <Constraint
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        <Constraint
             android:id="@+id/btn2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar">
-            <CustomAttribute
-                app:attributeName="imageAlpha"
-                app:customIntegerValue="255" />
-        </Constraint>
+            app:layout_constraintBottom_toTopOf="parent"/>
         <Constraint
             android:id="@+id/linearlayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn2" />
+            app:layout_constraintTop_toBottomOf="@+id/btn1"/>
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/collapsed">
@@ -42,29 +45,23 @@
             android:id="@+id/btn1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+            app:layout_constraintBottom_toTopOf="parent" />
         <Constraint
             android:id="@+id/btn2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn2">
-            <CustomAttribute
-                app:attributeName="imageAlpha"
-                app:customIntegerValue="0" />
-        </Constraint>
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
         <Constraint
             android:id="@+id/linearlayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn1" />
+            app:layout_constraintTop_toBottomOf="@+id/btn2"/>
     </ConstraintSet>
 
     <Transition
@@ -73,6 +70,6 @@
         <OnSwipe
             app:dragDirection="dragUp"
             app:touchAnchorId="@+id/linearlayout"
-            app:touchAnchorSide="top" />
+            app:onTouchUp="stop" />
     </Transition>
 </MotionScene>
